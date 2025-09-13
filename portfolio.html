@@ -1,0 +1,252 @@
+<!DOCTYPE ht>
+<ht lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Deepan K R </title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      line-height: 1.6;
+      background: #fdfdfd;
+      color: #333;
+    }
+
+    /* Gradient utilities */
+    .gradient-bg {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffe082;
+    }
+
+    /* Profile */
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+      gap: 2rem;
+      background: #fff;
+    }
+    .profile .bio {
+      max-width: 600px;
+      text-align: center;
+    }
+    .profile .bio h2 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #222;
+    }
+    .profile .bio p {
+      font-size: 1.05rem;
+      color: #555;
+    }
+
+    /* Skills */
+    .skills {
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, #f6f9fc, #eef2ff);
+    }
+    .skills h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #6a11cb;
+    }
+    .skill {
+      margin-bottom: 1.5rem;
+    }
+    .skill-name {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    .skill-bar {
+      background: #dee2e6;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .skill-bar div {
+      height: 20px;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      width: 0;
+      animation: loadSkill 2s forwards;
+      border-radius: 20px;
+      box-shadow: inset 0 -2px 6px rgba(0,0,0,0.3);
+    }
+    @keyframes loadSkill {
+      from { width: 0; }
+    }
+
+    /* Projects */
+    .projects {
+      padding: 3rem 2rem;
+      background: #fff;
+    }
+    .projects h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #6a11cb;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .project {
+      background: linear-gradient(135deg, #ffffff, #f8f9ff);
+      border-radius: 16px;
+      padding: 1.8rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.2);
+    }
+    .project h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+      color: #2575fc;
+    }
+    .project p {
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      font-size: 0.95rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .profile {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <h1>Deepan K R </h1>
+      <ul>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Profile -->
+  <section id="profile" class="profile">
+    <div class="bio">
+      <h2>Hello, I’m Deepan K R 👋</h2>
+      <p>I’m a Machine Learning enthusiast passionate about building intelligent systems that can learn from data.  
+      My focus is on computer vision, natural language processing, and deploying scalable AI solutions.</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills">
+    <h2> Skills</h2>
+    <div class="skill">
+      <div class="skill-name">Python</div>
+      <div class="skill-bar"><div style="width:95%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">TensorFlow</div>
+      <div class="skill-bar"><div style="width:85%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">PyTorch</div>
+      <div class="skill-bar"><div style="width:80%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Data Visualization</div>
+      <div class="skill-bar"><div style="width:75%"></div></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="projects">
+    <h2> Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>Image Classification</h3>
+        <p>Developed a CNN to classify satellite images, achieving 92% accuracy. Implemented with TensorFlow and Keras.</p>
+      </div>
+      <div class="project">
+        <h3>NLP Chatbot</h3>
+        <p>Built a natural language chatbot using Transformer models. Integrated with a web interface for real-time conversations.</p>
+      </div>
+      <div class="project">
+        <h3>Recommendation System</h3>
+        <p>Designed a collaborative filtering model to recommend books and movies based on user preferences.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Deepan K R  | Portfolio</p>
+  </footer>
+</body>
+</ht>
